@@ -1,0 +1,14 @@
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\bin\Debug\net6.0\DbLayer.deps.json
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\bin\Debug\net6.0\DbLayer.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\bin\Debug\net6.0\DbLayer.dll
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\bin\Debug\net6.0\DbLayer.pdb
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.dll
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\refint\DbLayer.dll
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.pdb
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\DbLayer.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Angular-Net6.0Datatable\ApiDatatableExample\DbLayer\obj\Debug\net6.0\ref\DbLayer.dll

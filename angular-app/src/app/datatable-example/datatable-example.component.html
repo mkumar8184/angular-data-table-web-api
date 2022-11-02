@@ -1,0 +1,133 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary p-3">
+    <h2> <a class="navbar-brand" href="#">Angular Data Table Example</a></h2>
+
+
+</nav>
+<div class="container-fluid py-3">
+    <div class="row my-3">
+        <div class="col">
+            <ul>
+                <li>
+                    Bind Datatable from web api and sql database</li>
+                <li> server side paging, sorting, searching using entity framework</li>
+                <li> Generic httpclient </li>
+                <li> Services to fetch data from web api </li>
+                <li> Action button for addition and deletion
+                <li>Boostrap 5 table css , can be customised as per requirement</li>
+                <li>Easy to understand code and cusotmization</li>
+                <li>Bootstrap Modal popup on edit click</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid py-3">
+        <div class="row my-3">
+            <div class="col">
+                <label>Employee List </label>
+            </div>
+        </div>
+        <table datatable [dtOptions]="dtOptions" width="100%" *ngIf="showTable"
+            class="table table-striped table-bordered">
+            <thead class=" table-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>EmailId</th>
+                    <th>Company Name</th>
+                    <th>Mobile</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of emplIst">
+                    <td>
+                        <div class="d-inline-block">
+                            <img class="rounded-circle shadow-4" style="width: 25px;"
+                                [src]="getProfileImage(user.profilePhoto)" alt="" />
+
+                            <p class="text-secondary fs-5"> <strong>{{ user.userName }}</strong></p>
+
+                        </div>
+                    </td>
+                    <td>{{ user.userId }}</td>
+                    <td>{{ user.emailId }}</td>
+                    <td>{{ user.companyName }}</td>
+
+                    <td>{{ user.mobileNumber }}</td>
+                    <td>{{ user.location }}</td>
+
+                    <td>
+                        <button class="btn rounded-circle btn-sm btn-outline-info me-1" title="Deactivate"
+                            (click)="editEmployee(myModal,user)">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn rounded-circle btn-sm btn-outline-danger" title="Deactivate">
+                            <i class="bi bi-x-circle"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--form modal-->
+<div class="modal fade" id="myModal" #myModal tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit User Details </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="selectedUser">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtpackage">User Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="selectedUser.userName" maxlength="200">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtpackage">Company Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="selectedUser.companyName"
+                                maxlength="200">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtpackage">Email Id</label>
+                            <input type="text" class="form-control" [(ngModel)]="selectedUser.emailId" maxlength="200">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtpackage">Location</label>
+                            <input type="text" class="form-control" [(ngModel)]="selectedUser.location" maxlength="200">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
