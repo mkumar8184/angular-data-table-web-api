@@ -1,4 +1,4 @@
-# angular-data-table-web-api
+# Angular Data Table with web api
 Bind Datatable from web api and sql database\
 \server side paging, sorting, searching using entity framework\
 \Generic httpclient\
