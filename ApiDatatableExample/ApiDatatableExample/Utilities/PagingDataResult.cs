@@ -25,36 +25,8 @@ namespace ApiDatatableExample.Utilities
             pagingResponse.RecordsFiltered = recordsTotal;
             return pagingResponse;
 
-        }
-        public static PagingResponse<T> GetPagingResponse<T>(IEnumerable<T> data,int draw)
-        {
-            var pagingResponse = new PagingResponse<T>()
-            {
-                Draw = draw
-            };
-        
-            var recordsTotal = data.Count();
-            pagingResponse.SerchData = data.ToArray();
-            pagingResponse.RecordsTotal = recordsTotal;
-            pagingResponse.RecordsFiltered = recordsTotal;
-            return pagingResponse;
+        }     
 
-        }
-
-        public static TResult Get<TResult>(this object @this, string propertyName)
-        {
-            return (TResult)@this.GetType().GetProperty(propertyName).GetValue(@this, null);
-        }
-        public static PagedResult<T> GetCustomPageResult<T>(IEnumerable<T> data, PagingRequest paging)
-        {
-            var skip = (paging.Start == 0 ? 0 : paging.Start - 1) * paging.Length;          
-            var pagingResponse = new PagedResult<T>();
-            var recordsTotal = data.Count();
-            pagingResponse.Data = data.Skip(skip).Take(paging.Length).ToArray();
-            pagingResponse.RecordsTotal = recordsTotal;           
-            return pagingResponse;
-
-        }
         public static IQueryable<t> OrderByDynamic<t>(this IQueryable<t> query, string? sortColumn, bool descending)
         {
             // Dynamically creates a call like this: query.OrderBy(p =&gt; p.SortColumn)

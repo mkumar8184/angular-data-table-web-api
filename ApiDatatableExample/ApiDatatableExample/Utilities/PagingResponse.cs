@@ -18,9 +18,5 @@ namespace ApiDatatableExample.Utilities
         [JsonProperty(PropertyName = "data")]
         public T[] SerchData { get; set; }
     }
-    public class PagedResult<T>
-    {
-        public int RecordsTotal { get; set; }       
-        public T[] Data { get; set; }
-    }
+  
 }
