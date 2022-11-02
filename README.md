@@ -1,5 +1,5 @@
 # angular-data-table-web-api
-Bind Datatable from web api and sql database
+Bind Datatable from web api and sql database--
 server side paging, sorting, searching using entity framework
 Generic httpclient
 Services to fetch data from web api
