@@ -55,7 +55,7 @@ namespace ApiDatatableExample.Utilities
             return pagingResponse;
 
         }
-        public static IQueryable<t> OrderByDynamic<t>(this IQueryable<t> query, string sortColumn, bool descending)
+        public static IQueryable<t> OrderByDynamic<t>(this IQueryable<t> query, string? sortColumn, bool descending)
         {
             // Dynamically creates a call like this: query.OrderBy(p =&gt; p.SortColumn)
             var parameter = Expression.Parameter(typeof(t), "p");

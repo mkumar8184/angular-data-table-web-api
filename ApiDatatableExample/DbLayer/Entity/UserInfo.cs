@@ -12,5 +12,22 @@ namespace DbLayer.Entity
         public string? MobileNumber { get; set; }
         public string? Location { get; set; }
         public bool? IsActive { get; set; }
+        public enum E
+        {
+            UserName,
+            UserId,
+            EmailId,           
+            CompanyName,
+            MobileNumber,
+            Location,
+            IsActive
+
+
+
+
+        }
+
     }
+  
+
 }

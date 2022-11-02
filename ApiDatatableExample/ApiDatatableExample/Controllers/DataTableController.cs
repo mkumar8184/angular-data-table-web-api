@@ -2,8 +2,10 @@
 using ApiDatatableExample.Utilities;
 using DbLayer.Entity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Xml.Linq;
 
 namespace FileUploadWebApi.Controllers
 {
@@ -44,30 +46,13 @@ namespace FileUploadWebApi.Controllers
                 || x.UserName.Contains(request.Search.Value)
                 || x.MobileNumber.Contains(request.Search.Value)
                 || x.Location.Contains(request.Search.Value)) : true);
-
-            return PagingDataResult.GetPagingResponse(SortingResult(result, request), request);
-
-        }
-        private IEnumerable<UserInfo> SortingResult(IEnumerable<UserInfo> userList, PagingRequest paging)
-        {
-            var colOrder = paging.Order[0];
-            switch (colOrder.Column)
-            {
-                case 0:
-                    userList = colOrder.Dir == "asc" ? userList.OrderBy(x => x.UserId) : userList.OrderByDescending(x => x.UserId);
-                    break;
-                case 1:
-                    userList = colOrder.Dir == "asc" ? userList.OrderBy(x => x.UserName) : userList.OrderByDescending(x => x.UserName);
-                    break;
-                case 2:
-                    userList = colOrder.Dir == "asc" ? userList.OrderBy(x => x.CompanyName) : userList.OrderByDescending(x => x.CompanyName);
-                    break;
-                    //and so on
-
-            }
-            return userList;
+          
+            return PagingDataResult.GetPagingResponse(PagingDataResult.OrderByDynamic(result,
+               ((UserInfo.E)request.Order[0].Column).ToString(),
+               request.Order[0].Dir == "asc"?false:true), request); 
 
         }
+     
 
 
 
